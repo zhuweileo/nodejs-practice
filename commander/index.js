@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const commander = require('commander');
 const inquirer = require('inquirer');
 const api = require('./api');
@@ -5,14 +6,14 @@ const packageJson = require('./package.json');
 
 const { Command } = commander;
 const program = new Command();
-program.version(packageJson.version, '-v, --version', '输出当前版本号');
-
-program
-  .option('-d, --debug', 'output extra debugging')
-
-if (program.debug) console.log(program.opts());
 
 async function main() {
+  program.version(packageJson.version, '-v, --version', '输出当前版本号');
+  program
+    .option('-d, --debug', 'output extra debugging')
+
+  if (program.debug) console.log(program.opts());
+
   const dbTodoList = await api.read().catch(e => {
     process.exit();
   }) || [];
@@ -168,4 +169,3 @@ async function main() {
 }
 
 main();
-program.parse(process.argv);
