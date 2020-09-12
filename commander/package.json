@@ -1,6 +1,6 @@
 {
   "name": "zw-cli-todo",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "cli todo",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "author": "zhuwei",
   "license": "ISC",
   "bin": {
-    "ztd": "bin/ztd"
+    "ztd": "index.js"
   },
   "dependencies": {
     "commander": "^6.1.0",
