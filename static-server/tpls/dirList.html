@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <% if(list.length) {%>
+        <% list.forEach(a => { %>
+        <div>
+            <a href="<%= a.path %>"><%= a.name %></a>
+        </div>
+        <% }) %>
+    <% } else { %>
+        <h1>空目录</h1>
+    <% } %>
+</body>
+
+</html>

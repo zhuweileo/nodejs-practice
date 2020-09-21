@@ -2,5 +2,11 @@
   "name": "static-server",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "pm2 start index.js --watch --no-daemon"
+  },
+  "dependencies": {
+    "ejs": "^3.1.5"
+  }
 }
